@@ -1,0 +1,7 @@
+2022-11-22 12:05:47,522 DEBUG setUpDriver()
+2022-11-22 12:05:47,526 TRACE getProperty(browser)
+2022-11-22 12:05:47,528 TRACE getProperty(remote)
+2022-11-22 12:05:47,529 TRACE getProperty(headless)
+2022-11-22 12:05:47,529 TRACE getProperty(hubUrl)
+2022-11-22 12:05:47,529 TRACE getProperty(driversFolder)
+2022-11-22 12:05:47,535 DEBUG setUp Driver(edge, Is Headless: false)
