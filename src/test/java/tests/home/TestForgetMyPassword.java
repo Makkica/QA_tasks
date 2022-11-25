@@ -1,13 +1,15 @@
 package tests.home;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import tests.BaseTestClass;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestForgetMyPassword {
+public class TestForgetMyPassword extends BaseTestClass {
     @Test
     public void testForgetMyPassword () {
         System.setProperty("webDriver.chrome.driver", System.getProperty("user.dir") + "drivers/chromedriver.exe");
@@ -25,4 +27,6 @@ public class TestForgetMyPassword {
         driver.findElement(By.cssSelector("#forgot-password-div > form > table > tbody > tr > td:nth-child(2) > button")).click();
 
     }
+
+
 }

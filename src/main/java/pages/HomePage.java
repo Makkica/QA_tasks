@@ -15,6 +15,9 @@ public class HomePage extends BasePageClass {
   private final By toolsQaHeaderImageLocator = By.xpath(toolsQaHeaderImageLocatorString);
   private final By elementsCardHeaderLocator = By.xpath(elementsCardHeaderLocatorString);
 
+  /*private final String buttonString = "//*[@id=\\\"login\\\"]";
+  private final By buttonLocator = By.xpath(buttonString);*/
+
   private final String HOME_PAGE_URL = getPageUrl(PageUrlPaths.HOME_PAGE);
 
   public HomePage(WebDriver driver) {
@@ -58,6 +61,7 @@ public class HomePage extends BasePageClass {
     WebElement elementsCard = getWebElement(elementsCardHeaderLocator);
     clickOnWebElement(elementsCard);
   }
+
 
   public ElementsPage clickElementsCard() {
     log.debug("clickElementsCard()");

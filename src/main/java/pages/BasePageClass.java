@@ -18,7 +18,7 @@ import utils.WebDriverUtils;
 
 public abstract class BasePageClass extends LoggerUtils {
 
-  protected WebDriver driver;
+  protected static WebDriver driver;
 
   public BasePageClass(WebDriver driver) {
     Assert.assertFalse(WebDriverUtils.hasDriverQuit(driver), "Driver instance has quit!");
@@ -53,12 +53,12 @@ public abstract class BasePageClass extends LoggerUtils {
     return wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
   }
 
-  protected WebElement getWebElement(By locator) {
+  protected static WebElement getWebElement(By locator) {
     log.trace("getWebElement(" + locator + ")");
     return driver.findElement(locator);
   }
 
-  protected WebElement getWebElement(By locator, int iTimeout) {
+  protected  static WebElement getWebElement(By locator, int iTimeout) {
     log.trace("getWebElement(" + locator + ", " + iTimeout + ")");
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(iTimeout));
     return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
