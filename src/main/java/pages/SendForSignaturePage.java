@@ -3,32 +3,35 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-public class SendForSignaturePage extends BasePageClass {
+ /*public class SendForSignaturePage extends BasePageClass {
 
-    private static final String enterRecipientEmailString = "//*[@class=\"recipient-email-input form-control\"]";
-    private static final By enterRecipientEmailLocator = By.xpath(enterRecipientEmailString);
+    @FindBy(xpath = "//*[@class=\"recipient-email-input form-control\"]")
+    private WebElement enterRecipientEmailLocator;
 
-    private static final String messageAgreementNameString =" //*[@class=\"name agreement-name form-control\"]";
-    private static final By messageAgreementNameLocator = By.xpath(messageAgreementNameString);
+    @FindBy (className = "name agreement-name form-control")
+    private WebElement messageAgreementNameLocator;
 
-    private static final String addFilesString = "//*[@id=\"add-files\"]";
-    private static final By addFilesLocator = By.xpath(addFilesString);
+    @FindBy (id = "add-files")
+    private WebElement addFilesLocator;
 
-    private static final String chooseFilesString = "//*[@id=\"choose-files-btn\"]";
-    private static final By chooseFilesLocator = By.xpath(chooseFilesString);
+    @FindBy (id = "choose-files-btn")
+    private WebElement chooseFilesLocator;
 
-    private static final String sendDocumentforSignatureString = "//*[contains(@class, \"btn btn-primary send-btn)]";
-    private static final By sendDocumentforSignatureLocator = By.xpath(sendDocumentforSignatureString);
+    @FindBy (className = "btn btn-primary send-btn")
+    private WebElement sendDocumentforSignatureLocator;
 
-    private static final String documentLocation = "C:\\Users\\RockMobile\\Desktop\\blank document.pdf";
 
-    public SendForSignaturePage(WebDriver driver) {
+    private String documentLocation = "C:\\Users\\RockMobile\\Desktop\\blank document.pdf";
+    private String recipientEmail = "mihajlo.praksatests.customusercreation.ui@null.echosignmail.com";
+
+   /*  public SendForSignaturePage(WebDriver driver) {
         super(driver);
     }
 
-    public static void insertRecipientEmail () {
-        getWebElement(enterRecipientEmailLocator).sendKeys("mihajlo.praksatests.customusercreation.ui@null.echosignmail.com");
+    public  insertRecipientEmail () {
+
     }
     public static void fillAgreementName () {
         getWebElement(messageAgreementNameLocator).sendKeys("Automation");
@@ -42,4 +45,4 @@ public class SendForSignaturePage extends BasePageClass {
         WebElement button = getWebElement(sendDocumentforSignatureLocator);
         button.click();
     }
-}
+} */

@@ -14,7 +14,7 @@ public class MainPage extends BasePageClass{
         super(driver);
     }
 
-    public static void clickrequestEsignature () {
+    public void clickrequestEsignature () {
         log.debug("clickrequestEsignature");
         WebElement button = getWebElement(requestESignatureLocator);
         button.click();
