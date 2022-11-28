@@ -6,7 +6,7 @@ import org.testng.annotations.*;
 import pages.HomePage;
 import pages.SignInPage;
 import pages.MainPage;
-import pages.SendForSignaturePage;
+
 import tests.BaseTestClass;
 
 
@@ -20,8 +20,8 @@ public class RequestForSignatureTest extends BaseTestClass {
         String baseUrl = "https://secure.adobesign.com/public/login";
         driver.get(baseUrl);
         HomePage home = new HomePage(driver);
-    }
-    @Test
+    }}
+    /* @Test
     public void request () {
         SignInPage.insertCredentials();
         SignInPage.clickSignIn();
@@ -40,4 +40,4 @@ public class RequestForSignatureTest extends BaseTestClass {
 
         tearDown(driver);
     }
-}
+} */

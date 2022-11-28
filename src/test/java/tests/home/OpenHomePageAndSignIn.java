@@ -20,14 +20,9 @@ public class OpenHomePageAndSignIn extends BaseTestClass {
         driver.get(baseUrl);
         HomePage home = new HomePage(driver);
 
-        // public void openAndSignIn(){
-        //    System.out.println("@Test - openAndSignIn");
-
-                SignInPage.insertCredentials();
-                SignInPage.clickSignIn();
 
 
-        //}
-
+       SignInPage signInPage = new SignInPage(driver);
+       signInPage.insertCredentials().clickSignIn();
 
 }}
