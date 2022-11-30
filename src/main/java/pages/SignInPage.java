@@ -12,13 +12,13 @@ import java.time.Duration;
 
 public class SignInPage extends  BasePageClass {
 
-    @FindBy (xpath ="//*[@id=\'userEmail\']")
+    @FindBy (xpath ="//*[@id='userEmail']")
     private WebElement userEmailLocator;
 
-    @FindBy (xpath ="//*[@id=\'userPassword\']")
+    @FindBy (xpath ="//*[@id='userPassword']")
     private WebElement userPasswordLocator;
 
-   @FindBy (xpath = "//*[@id=\'login\']")
+   @FindBy (xpath = "//*[@id='login']")
     private WebElement buttonLocator;
 
     private String userEmail ="janko.praksatests.customusercreation.ui@null.echosignmail.com";
@@ -27,28 +27,16 @@ public class SignInPage extends  BasePageClass {
     public SignInPage(WebDriver driver) {
         super(driver);
     }
-    SignInPage signInPage = new SignInPage(driver);
+//    SignInPage signInPage = new SignInPage(driver);
     public SignInPage insertCredentials() {
-        SignInPage signInPage = new SignInPage(driver);
         waitForWebElementToBeClickable(userEmailLocator, 30);
         waitForWebElementToBeClickable(userPasswordLocator, 15);
         typeTextToWebElement(userEmailLocator, userEmail);
         typeTextToWebElement(userPasswordLocator,userPassword);
-        return new SignInPage(driver);
+        return this;
     }
      public SignInPage clickSignIn () {
-
-
-           waitForWebElementToBeClickable(buttonLocator,5).click();
-         return signInPage;
+        waitForWebElementToBeClickable(buttonLocator,5).click();
+        return this;
      }
-
-
-
-
-   /* driver.findElement(By.xpath("//*[@id=\"userEmail\"]")).sendKeys("janko.praksatests.customusercreation.ui@null.echosignmail.com");
-    driver.findElement(By.xpath("//*[@id=\"userPassword\"]")).sendKeys("L8hGZ2d_PwRiUV$"); */
-
-
-
 }

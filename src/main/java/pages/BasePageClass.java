@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -23,6 +24,7 @@ public abstract class BasePageClass extends LoggerUtils {
   public BasePageClass(WebDriver driver) {
     Assert.assertFalse(WebDriverUtils.hasDriverQuit(driver), "Driver instance has quit!");
     this.driver = driver;
+    PageFactory.initElements(driver, this);
   }
 
   protected String getPageUrl(String sPath) {
